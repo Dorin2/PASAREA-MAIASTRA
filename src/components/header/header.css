@@ -1,0 +1,43 @@
+body {
+    font-family:'Public sans', Courier, monospace
+}
+img.background {
+    
+    width: 100%;
+    max-width: 1800px;
+  
+}
+.background-section{
+    position: relative;
+    width: 1440px;
+    height: 855px;
+}
+img.logo1 {
+    position: absolute;
+    top: 25px;
+    left: 30px;
+    cursor: pointer;
+}
+img.logo2 {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+}
+h1.title{
+    position: absolute;
+    font-size: 155px;
+    color: #fff;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+h3.title2{
+    margin-top: 50px;
+    color: #7A785A;
+}
+p.header-description{
+    color: #7A785A;
+    margin: 50px 30px;
+}
