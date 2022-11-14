@@ -1,0 +1,23 @@
+button {
+    background-color: rgba(255, 255, 255, 0);
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    font-weight: bold;
+    color: #7A785A;;
+    
+    
+}
+
+button:hover {
+    background-color: #E8E6DD;
+    transition: all ease 0.3s;
+
+}
+
+.section-button {
+    display: flex;
+    justify-content: space-between;
+    margin: 50px 50px 0px 50px;
+}
