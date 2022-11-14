@@ -16,14 +16,17 @@ const Section =()=>{
                 </div>
                 <span className="line"></span>
                 <div className="section-filter">
-                    <button className="filter1">INTERESANT</button>
-                    <button className="filter2">TRIST</button>
-                    <button className="filter3">MELANCOLIC</button>
-                    <button className="filter4">VESEL</button>
-                    <button className="filter5">CIUDATEL</button>
+                    <button className="filter-inactive">INTERESANT</button>
+                    <button className="filter-inactive">TRIST</button>
+                    <button className="filter-inactive">MELANCOLIC</button>
+                    <button className="filter-inactive">VESEL</button>
+                    <button className="filter-inactive">CIUDATEL</button>
                 </div>
             </div>
+            <div className="section-films">
 
+            </div>
+            <span className="line"></span>
         
         </>
 
