@@ -47,3 +47,7 @@ button.filter-inactive:hover{
 .section-films{
     height: 1400px;
 }
+
+.section-rown{
+    display: flex;
+}

@@ -1,5 +1,6 @@
 import React from "react";
 import './app-body.css';
+import Card from "./content-body";
 
 const Section =()=>{
 
@@ -25,6 +26,9 @@ const Section =()=>{
             </div>
             <div className="section-films">
                 <div className="section-rown">
+                    <Card/>
+                    <Card/>
+                    <Card/>
                 </div>
             </div>
             <span className="line"></span>
