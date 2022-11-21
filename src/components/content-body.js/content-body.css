@@ -1,6 +1,42 @@
+
 .card-section {
     width: 220px;
     height: 445px;
     border: solid 2px #767676;
     border-radius: 25px;
+    color: #7A785A;
+}
+img.image-card {
+    margin: 15px;
+}
+.card-section-down{
+    margin: 10px;
+}
+strong.title{
+    font-size: 15px;
+}
+.section-rating{
+    margin: 5px;
+    display: flex;
+}
+
+p.imbd-Rating{
+    display: inline;
+    font-weight: 6px;
+    margin: 0px;
+    padding: 0px;
+}
+img.star{
+    display: inline;
+}
+
+span.rating{
+    display: block;
+    font-size: 15px;
+}
+span.number-votes{
+    font-size: 10px;
+}
+.section-rating-right{
+    text-align: start;
 }
