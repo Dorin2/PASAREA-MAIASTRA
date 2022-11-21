@@ -1,11 +1,12 @@
 import React from 'react';
+import './content-body.css';
 
 const Card = ()=>{
 
 
     return (
-        <div>
-            Dorin
+        <div className='card-section'>
+          
         </div>
     )
 };

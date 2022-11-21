@@ -50,4 +50,6 @@ button.filter-inactive:hover{
 
 .section-rown{
     display: flex;
+    justify-content: space-between;
+    margin: 50px;
 }
