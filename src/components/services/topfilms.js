@@ -2,19 +2,14 @@ import React from "react";
 
 
 
+    const getResource = async(url)=>{
 
-const Doptions = ()=>{
+        const res = await fetch(url),
+              some = await res.json();
 
-    const paul = () =>{
         
-    };
+        return some;
 
-    
-return(
-    paul()
-   
-)
+    }
 
-}
-
-export default Doptions;
+ 
