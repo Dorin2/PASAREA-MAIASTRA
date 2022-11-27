@@ -1,13 +1,15 @@
-import React from "react";
+import React,{Component} from "react";
 import './app-body.css';
 import Content from "../content-body.js/content-body";
-import films from "../all-films/all-film";
+import Films from "../all-films/all-film";
 
-const Section =()=>{
 
-    films();
-   
+export default class Section extends Component{
 
+
+
+render(){
+  
     return(
         <>
             <div className="section-select">
@@ -30,18 +32,14 @@ const Section =()=>{
             </div>
             <div className="section-films">
                 <div className="section-rown">
-                    <Content name ="tt3896198"/>
-                    <Content name ="tt1731141"/>
-                    
+                    <Films/>
                 </div>
             </div>
             <span className="line"></span>
         
         </>
 
-    )
+    )}
 
 
-}
-
-export default Section;
+};
