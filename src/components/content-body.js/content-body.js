@@ -2,14 +2,14 @@ import React from 'react';
 import './content-body.css';
 import Topfilms from '../services/topfilms';
 
+
 const Card = ()=>{
+  const film = new Topfilms();
 
-  Topfilms = new Topfilms();
-
-
+  film.getFilms().then(res=>console.log(res));
     return (
         <div className='card-section'>
-          {/* <img className='image-card' src='proba1.jpg' alt='proba1' width='190px' height='290px' />
+          <img className='image-card' src='proba1.jpg' alt='proba1' width='190px' height='290px' />
           <div className='card-section-down'>
             <strong className='title'>The Lord of the Rings: The Fellowship of the Ring</strong>
             <div className='section-rating'>
@@ -25,8 +25,8 @@ const Card = ()=>{
                   <span className='PG'>PG-13</span>
                   <span className='duration'>2h 58m</span>
             </div>
-          </div> */}
-        
+          </div>
+      
         </div>
     )
 };
