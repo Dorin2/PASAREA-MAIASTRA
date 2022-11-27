@@ -1,8 +1,11 @@
 import React from "react";
 import './app-body.css';
 import Content from "../content-body.js/content-body";
+import films from "../all-films/all-film";
 
 const Section =()=>{
+
+    films();
    
 
     return(
