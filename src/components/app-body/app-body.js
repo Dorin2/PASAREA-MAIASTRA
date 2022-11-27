@@ -1,8 +1,9 @@
 import React from "react";
 import './app-body.css';
-import Card from "../content-body.js/content-body";
+import Content from "../content-body.js/content-body";
 
 const Section =()=>{
+   
 
     return(
         <>
@@ -26,11 +27,8 @@ const Section =()=>{
             </div>
             <div className="section-films">
                 <div className="section-rown">
-                    <Card/>
-                    <Card/>
-                    <Card/>
-                    <Card/>
-                    <Card/>
+                    <Content/>
+                    
                 </div>
             </div>
             <span className="line"></span>

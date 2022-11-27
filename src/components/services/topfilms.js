@@ -19,9 +19,9 @@ export default class Topfilms{
     };
 
 
-    getFilms = async()=>{
+    getFilms = async(title)=>{
 
-        const res = await this.getResource('http://www.omdbapi.com/?i=tt3896198&apikey=ae4e6130');
+        const res = await this.getResource(`http://www.omdbapi.com/?i=${title}&apikey=ae4e6130`);
         return await res
     }
     
