@@ -27,7 +27,8 @@ const Section =()=>{
             </div>
             <div className="section-films">
                 <div className="section-rown">
-                    <Content/>
+                    <Content name ="tt3896198"/>
+                    <Content name ="tt1731141"/>
                     
                 </div>
             </div>

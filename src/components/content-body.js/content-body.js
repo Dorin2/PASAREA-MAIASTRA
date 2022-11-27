@@ -4,6 +4,14 @@ import Topfilms from '../services/topfilms';
 
 
 export default class Content extends Component {
+
+  constructor(props) {
+    super(props);
+    this.updateFilm();
+
+  };
+
+
   film = new Topfilms();
   state = {
     Title: null,
@@ -16,19 +24,26 @@ export default class Content extends Component {
     imdbVotes: null
   }
   
-  // updateFilm(){
-  //   const title = 'tt3896198';
-  //   this.film.getFilms(title).then((res)=> console.log(res));
-  // };
-
   
+  updateFilm(){
+    const title =`${this.props.name}`;
+    this.film.getFilms(title).then((res)=> {
+      this.setState({
+        Title: res.Title,
+        Rated: res.Rated,
+        Runtime: res.Runtime,
+        Genre: res.Genre,
+        imdbRating: res.imdbRating,
+        Year: res.Year,
+        Poster: res.Poster,
+        imdbVotes: res.imdbVotes
+      })
+    });
+  };
 
-  // film.getFilms().then(res=>console.log(res));
    
   render() {
-    const {Title,Rated,Runtime,Genre,imdbRating,Year,Poster,imdbVotes} = this.state;
-    const title = 'tt3896198';
-    this.film.getFilms(title).then((res)=> console.log(res));
+    const {Title,Rated,Runtime,imdbRating,Year,Poster,imdbVotes} = this.state;
     return (
           <div className='card-section'>
             <img className='image-card' src={Poster} alt='proba1' width='190px' height='290px' />

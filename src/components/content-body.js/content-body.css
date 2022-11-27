@@ -16,7 +16,7 @@ strong.title{
     font-size: 15px;
 }
 .section-rating{
-    margin: 5px;
+    margin: 5px 15px;
     display: flex;
     justify-content: space-around;
 }
