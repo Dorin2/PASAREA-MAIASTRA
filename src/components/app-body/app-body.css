@@ -44,12 +44,7 @@ button.filter-inactive:hover{
     background-color: #CECBB2;
     color: #7A785A;
 }
-.section-films{
-    height: 1400px;
-}
 
 .section-rown{
-    display: flex;
-    justify-content: space-between;
     margin: 50px;
 }
