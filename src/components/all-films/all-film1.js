@@ -1,8 +1,7 @@
 import React from "react";
 import Content from "../content-body.js/content-body";
-import "./all-film.css";
+import "./all-film1.css";
 
-const Films=()=>{
 const allfilms = [ "tt0120737","tt0167261","tt0167260","tt0903624","tt1170358","tt2310332","tt5052448",
     "tt0111161","tt0325980","tt0383574","tt0449088","tt0145487","tt0316654","tt0413300","tt0372784","tt0468569",
     "tt1345836","tt1375666","tt0361748","tt0371746","tt1228705","tt1300854","tt0770828","tt0172495","tt3416742",
@@ -15,6 +14,7 @@ const allfilms = [ "tt0120737","tt0167261","tt0167260","tt0903624","tt1170358","
     "tt1136608","tt1972591","tt8367814","tt0293564","tt0286112","tt1392190","tt1636826","tt4501244","tt3521126",
     "tt1731141"
     ];
+const FilmsPage1=()=>{
 let size = 5;
 
 let totalfilms = [];
@@ -22,14 +22,9 @@ let totalfilms = [];
 for (let i = 0; i < Math.ceil(allfilms.length/size); i++){
     totalfilms[i] = allfilms.slice((i*size),(i*size) + size);
 }
-
-console.log(totalfilms);
-    
-
 const Item = totalfilms[0].map(e=><Content name = {e}/>);
 const Item1 = totalfilms[1].map(e=><Content name = {e}/>);
 const Item2 = totalfilms[2].map(e=><Content name = {e}/>);
-const Item3 = totalfilms[3].map(e=><Content name = {e}/>);
 
 return(
     <>
@@ -45,7 +40,10 @@ return(
     </>
 );
 
+
 };
 
-export default Films;
+export  {allfilms};
+
+export default  FilmsPage1;
 

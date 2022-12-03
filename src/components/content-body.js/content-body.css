@@ -5,6 +5,8 @@
     border: solid 2px #767676;
     border-radius: 25px;
     color: #7A785A;
+    transition-property: all;
+    transition: all 0.3s ease;
 }
 img.image-card {
     margin: 15px;
@@ -47,4 +49,13 @@ span.number-votes{
     display: flex;
     justify-content: space-around;
     font-size: 15px;
+}
+.card-section:hover{
+
+    cursor: pointer;
+    color: #fff;
+    transition-property: all;
+    transition: all 0.3s ease;
+    background-color: #7A785A;
+    transform: scale(105%);
 }
