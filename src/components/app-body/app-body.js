@@ -1,8 +1,9 @@
 import React,{Component} from "react";
 import './app-body.css';
-import FilmsPage1 from "../all-films/all-film1.js";
-import FilmsPage2 from "../all-films/all-film2.js";
+import FilmsPage1 from "../all-films/all-film1";
 import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
+import Pagination from "../pagination/pagination";
+import PagContent from "../all-films/pag-content";
 
 
 
@@ -26,25 +27,30 @@ render(){
                     </div>
                     <span className="line"></span>
                     <div className="section-filter">
-                        <button className="filter-inactive">INTERESANT</button>
-                        <button className="filter-inactive">TRIST</button>
-                        <button className="filter-inactive">MELANCOLIC</button>
-                        <button className="filter-inactive">VESEL</button>
-                        <button className="filter-inactive">CIUDATEL</button>
+                        <div  className="section-filter-right">
+                            <button className="filter-inactive">INTERESANT</button>
+                            <button className="filter-inactive">TRIST</button>
+                            <button className="filter-inactive">MELANCOLIC</button>
+                            <button className="filter-inactive">VESEL</button>
+                            <button className="filter-inactive">CIUDATEL</button>
+                        </div>
+                        <div className="section-filter-left">
+                            <Pagination/>
+                        </div>
                     </div>
                 </div>
                 <div className="section-films">
-                    <div className="section-rown">
-                        {/* <FilmsPage1/> */}
-                        {/* <FilmsPage2/> */}
-                        <Routes>
-                        {/* <Route path="/filmpage2" element = {<FilmsPage1/>}/>  */}
-
-                        {/* <Route path="/filmpage2" element = {<FilmsPage2/>}/>  */}
-                        </Routes>
-                    </div>
+                    <FilmsPage1/>
                 </div>
                 <span className="line"></span>
+                <div className="section-filter">
+                        <div  className="section-filter-right">
+                            
+                        </div>
+                        <div className="section-filter-left">
+                            <Pagination/>
+                        </div>
+                    </div>
 
             </div>
         </Router>

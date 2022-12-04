@@ -1,0 +1,27 @@
+ul{
+    list-style-type: none;
+}
+li{
+    list-style-type: none;
+    display: inline;
+   
+
+}
+.link{
+    padding: 10px 15px;
+    border-radius: 15px;
+    color: #7A785A;
+    list-style-type: none;
+    text-decoration:none;
+
+}
+button{
+    margin: 0;
+}
+.link:hover{
+
+    background-color: #E8E6DD;
+    transition: all ease 0.3s;
+    cursor: pointer;
+
+}
