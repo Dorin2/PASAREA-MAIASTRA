@@ -18,6 +18,11 @@ li{
 button{
     margin: 0;
 }
+.pagination{
+    display: flex;
+    justify-content: end;
+    margin-right: 30px
+}
 .link:hover{
 
     background-color: #E8E6DD;

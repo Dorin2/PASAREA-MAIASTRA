@@ -1,9 +1,7 @@
 import React,{Component} from "react";
 import './app-body.css';
-import FilmsPage1 from "../all-films/all-film1";
 import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
-import Pagination from "../pagination/pagination";
-import PagContent from "../all-films/pag-content";
+import Films from "../all-films/all-film";
 
 
 
@@ -35,22 +33,14 @@ render(){
                             <button className="filter-inactive">CIUDATEL</button>
                         </div>
                         <div className="section-filter-left">
-                            <Pagination/>
+                            
                         </div>
                     </div>
                 </div>
                 <div className="section-films">
-                    <FilmsPage1/>
+                    <Films/>
                 </div>
                 <span className="line"></span>
-                <div className="section-filter">
-                        <div  className="section-filter-right">
-                            
-                        </div>
-                        <div className="section-filter-left">
-                            <Pagination/>
-                        </div>
-                    </div>
 
             </div>
         </Router>

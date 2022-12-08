@@ -1,4 +1,7 @@
 import React, {useState} from "react";
+import Content from "../content-body.js/content-body";
+import Pagination from "../pagination/pagination";
+import Row from "../row/row";
 
 
 const allfilms = ["tt0120737","tt0167261","tt0167260","tt0903624","tt1170358","tt2310332","tt5052448",
@@ -17,11 +20,18 @@ const Films =()=>{
     const [loading,setloading] = useState(false);
     const [currentPage, setcurrentPage] = useState(1);
     const [filmsPerPage] = useState(15);
-
-
+    const lastFilmIndex = currentPage * filmsPerPage;
+    const firstFilmIndex = lastFilmIndex - filmsPerPage;
+    const currentFilms = films.slice(firstFilmIndex,lastFilmIndex)
+    console.log(currentFilms);
     return(
-
-
+        <>
+            <Pagination
+            filmsPerPage = {filmsPerPage}
+            totalFilms = {films.length}
+            />
+            <Row currentFilms={currentFilms}/>
+        </>
     )
 
 }
@@ -32,5 +42,6 @@ const Films =()=>{
 
 
 export {allfilms};
+export default Films;
 
 
