@@ -1,6 +1,6 @@
 import React,{Component} from "react";
 import './app-body.css';
-import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
+
 import Films from "../all-films/all-film";
 
 
@@ -12,7 +12,7 @@ export default class Section extends Component{
 render(){
   
     return(
-        <Router>
+       
             <div className="app">
                 <div className="section-select">
                     <div className="section-button">
@@ -40,10 +40,9 @@ render(){
                 <div className="section-films">
                     <Films/>
                 </div>
-                <span className="line"></span>
+            
 
             </div>
-        </Router>
 
     )}
 

@@ -1,5 +1,4 @@
 import React, {useState} from "react";
-import Content from "../content-body.js/content-body";
 import Pagination from "../pagination/pagination";
 import Row from "../row/row";
 
@@ -15,33 +14,46 @@ const allfilms = ["tt0120737","tt0167261","tt0167260","tt0903624","tt1170358","t
                   "tt0253474","tt0120616","tt0209163","tt0859163","tt0277296","tt1745960","tt0152930","tt0183869","tt0295721",
                   "tt1136608","tt1972591","tt8367814","tt0293564","tt0286112","tt1392190","tt1636826","tt4501244","tt3521126",
                   "tt1731141"];
+
+                  
 const Films =()=>{
-    const [films, setfilms] = useState(allfilms);
-    const [loading,setloading] = useState(false);
-    const [currentPage, setcurrentPage] = useState(1);
-    const [filmsPerPage] = useState(15);
-    const lastFilmIndex = currentPage * filmsPerPage;
-    const firstFilmIndex = lastFilmIndex - filmsPerPage;
-    const currentFilms = films.slice(firstFilmIndex,lastFilmIndex)
-    console.log(currentFilms);
+
+
+
+    let [films] = useState(allfilms);
+    let [loading,setloading] = useState(false);
+    let [currentPage, setcurrentPage] = useState(1);
+    let [filmsPerPage] = useState(15);
+    let lastFilmIndex = currentPage * filmsPerPage;
+    let firstFilmIndex = lastFilmIndex - filmsPerPage;
+    let currentFilms = films.slice(firstFilmIndex,lastFilmIndex);
+
+    let paginate = (number) => {setcurrentPage(number)};
+
+
+  
+
     return(
-        <>
+        <>  
+           
             <Pagination
             filmsPerPage = {filmsPerPage}
             totalFilms = {films.length}
+            paginate = {paginate}
             />
             <Row currentFilms={currentFilms}/>
+            <span className="line"></span>
+            <Pagination
+            filmsPerPage = {filmsPerPage}
+            totalFilms = {films.length}
+            paginate = {paginate}
+            />
+          
         </>
     )
 
 }
 
-
-
-
-
-
-export {allfilms};
 export default Films;
 
 

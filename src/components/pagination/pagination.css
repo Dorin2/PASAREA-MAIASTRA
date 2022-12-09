@@ -30,3 +30,9 @@ button{
     cursor: pointer;
 
 }
+button.buton-active{
+    background-color: #7A785A;
+    transition: all ease 0.3s;
+    color: #BCB9A2;
+
+}
