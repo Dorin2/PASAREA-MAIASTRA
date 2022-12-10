@@ -1,46 +1,26 @@
-import React from "react";
+import React from 'react';
+import ReactPaginate from 'react-paginate';
 import './pagination.css';
 
+const Pagination = props => {
 
-
-
-const Pagination =({filmsPerPage, totalFilms, paginate})=>{
-
-
-const pageNumber =[];
-
-
-for (let i = 1; i <=Math.ceil( totalFilms/filmsPerPage); i++ ){
-        pageNumber.push(i)
-};
-
-const ClickActive = e => {
-    const foo = document.querySelectorAll("button.link");
-
-    for (var i = 0; i < foo.length; i++) {
-      foo[i].classList.remove("buton-active");
-    }
-
-    e.currentTarget.classList.add("buton-active");
-  };
-
-
-
-return(
-
-    <div className="pagination">
-        <ul className="pagination">
-               {pageNumber.map(number =>(
-                <li className="page-item" key = {number}>
-                    <button onClick={(e)=> {paginate(number); ClickActive(e)}}  
-                    className="link " 
-                    id= {number}>{number}</button>
-                </li>
-               ))}
-        </ul>
+  
+  return (
+    <div>
+      <ReactPaginate
+      className='dorin'
+        breakLabel="..."
+        nextLabel=">"
+        onPageChange={props.Click}
+        pageRangeDisplayed={props.pageRangeDisplayed}
+        pageCount={props.pageCount}
+        previousLabel="<"
+        renderOnZeroPageCount={null}
+      />
     </div>
-
-)
+  );
 };
+
+
 
 export default Pagination;
