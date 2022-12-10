@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import Pagination from "../pagination/pagination";
+import Pagination from "../pagination/Pagination";
 import Row from "../row/row";
 
 
@@ -28,26 +28,31 @@ const Films =()=>{
     let firstFilmIndex = lastFilmIndex - filmsPerPage;
     let currentFilms = films.slice(firstFilmIndex,lastFilmIndex);
 
-    let paginate = (number) => {setcurrentPage(number)};
+    let paginate = (number) => {
+     let dor = number.selected + 1;
+        setcurrentPage(dor);
+    };
+
+        
+    let pageNumber =[];
 
 
-  
+    for (let i = 1; i <=Math.ceil( allfilms.length/filmsPerPage); i++ ){
+        pageNumber.push(i)
+    };
+
+    
+
 
     return(
         <>  
+        <Pagination pageCount ={pageNumber.length} pageRangeDisplayed ={filmsPerPage} Click = {paginate}  />
            
-            <Pagination
-            filmsPerPage = {filmsPerPage}
-            totalFilms = {films.length}
-            paginate = {paginate}
-            />
+     
             <Row currentFilms={currentFilms}/>
             <span className="line"></span>
-            <Pagination
-            filmsPerPage = {filmsPerPage}
-            totalFilms = {films.length}
-            paginate = {paginate}
-            />
+            
+      
           
         </>
     )
