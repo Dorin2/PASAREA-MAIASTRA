@@ -1,25 +1,42 @@
 import React,{Component} from "react";
 import './app-body.css';
-
-
+import Filter from "../filter/filter";
 import Films from "../all-films/all-film";
+import allfilmsNorm from "../resources/films";
+
 
 
 
 export default class Section extends Component{
     constructor(props) {
         super(props);
-        this.onClick = this.onClick.bind(this);
-        this.state = ''
-      }
+
+        this.state = {
+            filterFilms: [],
+            allfilmsNorm1: allfilmsNorm
+        };
+
+        this.state.filterFilms = this.state.allfilmsNorm1;
+        this.choseCategory = this.choseCategory.bind(this);
+       
+    }
 
       onClick() {
         this.setState({ show: 'active' });
         console.log(this.state);
       }
 
+      choseCategory(categories){
+        // this.setState({
+        //     filterFilms: this.state.allfilmsNorm1.filter((e)=> e.cat === categories)
+        // })
+        console.log(categories);
+
+      }
+
+
 render(){
-    const { show } = this.state;
+
     
     return(
        
@@ -36,11 +53,7 @@ render(){
                     <span className="line"></span>
                     <div className="section-filter">
                         <div  className="section-filter-right">
-                            <button className="filter">INTERESANT</button>
-                            <button className="filter">TRIST</button>
-                            <button className="filter">MELANCOLIC</button>
-                            <button className="filter">VESEL</button>
-                            <button className="filter">CIUDATEL</button>
+                            <Filter choseCategory = {this.choseCategory}/>
                         </div>
                         <div className="section-filter-left">
                             
@@ -48,7 +61,7 @@ render(){
                     </div>
                 </div>
                 <div className="section-films">
-                    <Films/>
+                    <Films allfilmsNorm = {this.state.filterFilms}/>
                 </div>
             
 

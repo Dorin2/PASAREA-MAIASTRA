@@ -41,6 +41,9 @@ button.filter{
     background-color: #E8E6DD;
     margin-right: 30px;
 }
+button.filter:hover{
+    background-color: #7A785A;
+}
 button.filter-inactive:hover{
     background-color: #CECBB2;
     color: #7A785A;
