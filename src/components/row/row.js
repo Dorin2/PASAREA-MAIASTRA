@@ -12,35 +12,30 @@ const Row =({currentFilms})=>{
     const Dorin1 =()=>{
         return(
             <div className="row">
-            {Row1.map(e=><Content name={e} key ={e}/>)}
+            {Row1.map(e=><Content name={e.name} key ={e.name} url={e.url}/>)}
             </div>
         );
     };
     const Dorin2 =()=>{
         return(
             <div className="row">
-            {Row2.map(e=><Content name={e} key ={e}/>)}
+            {Row2.map(e=><Content name={e.name} key ={e.name} url={e.url}/>)}
             </div>
         );
     };
     const Dorin3 =()=>{
         return(
             <div className="row">
-            {Row3.map(e=><Content name={e} key ={e}/>)}
+            {Row3.map(e=><Content name={e.name} key ={e.name} url={e.url}/>)}
             </div>
         );
     };
 
     return(
         <div className="Page"> 
-             <Dorin1/>
-            
+            <Dorin1/>
             <Dorin2/>
-           
-            
             <Dorin3/>
-      
-          
         </div>
 
     )

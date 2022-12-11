@@ -59,3 +59,9 @@ span.number-votes{
     background-color: #7A785A;
     transform: scale(105%);
 }
+a {
+    list-style-type: none;
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
