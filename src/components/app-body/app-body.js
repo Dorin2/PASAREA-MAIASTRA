@@ -27,11 +27,9 @@ export default class Section extends Component{
       }
 
       choseCategory(categories){
-        // this.setState({
-        //     filterFilms: this.state.allfilmsNorm1.filter((e)=> e.cat === categories)
-        // })
-        console.log(categories);
-
+        this.setState({
+            filterFilms: this.state.allfilmsNorm1.filter((e)=> e.cat === categories)
+        })
       }
 
 

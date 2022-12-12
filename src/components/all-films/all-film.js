@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import Pagination from "../pagination/Pagination";
 import Row from "../row/row";
-import allfilmsNorm from "../resources/films";
+// import allfilmsNorm from "../resources/films";
 
 
 
@@ -9,18 +9,19 @@ import allfilmsNorm from "../resources/films";
                   
 
 
-const Films =()=>{
+const Films =({allfilmsNorm})=>{
+    console.log(allfilmsNorm);
     
     const allfilms = allfilmsNorm.sort(() => Math.random() - 0.5);
 
 
-    let [films] = useState(allfilms);
+    // let [films] = useState(allfilms);
     let [currentPage, setcurrentPage] = useState(1);
     let [filmsPerPage] = useState(15);
     let lastFilmIndex = currentPage * filmsPerPage;
     let firstFilmIndex = lastFilmIndex - filmsPerPage;
-    let currentFilms = films.slice(firstFilmIndex,lastFilmIndex);
-
+    let currentFilms = allfilms.slice(firstFilmIndex,lastFilmIndex);
+    console.log(firstFilmIndex);
     let paginate = (number) => {
      let dor = number.selected + 1;
         setcurrentPage(dor);
@@ -34,6 +35,8 @@ const Films =()=>{
         pageNumber.push(i)
     };
 
+  
+
     
 
 
@@ -44,7 +47,7 @@ const Films =()=>{
      
             <Row currentFilms={currentFilms}/>
             <span className="line"></span>
-            <Pagination pageCount ={pageNumber.length} pageRangeDisplayed ={filmsPerPage} Click = {paginate}  />
+            <Pagination pageCount ={pageNumber.length} pageRangeDisplayed ={filmsPerPage} OnClick = {paginate}  />
             
       
           
