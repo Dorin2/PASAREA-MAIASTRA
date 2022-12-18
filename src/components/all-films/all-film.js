@@ -1,7 +1,6 @@
 import React, {useState} from "react";
 import Pagination from "../pagination/Pagination";
 import Row from "../row/row";
-// import allfilmsNorm from "../resources/films";
 
 
 
@@ -15,7 +14,6 @@ const Films =({allfilmsNorm})=>{
     const allfilms = allfilmsNorm.sort(() => Math.random() - 0.5);
 
 
-    // let [films] = useState(allfilms);
     let [currentPage, setcurrentPage] = useState(1);
     let [filmsPerPage] = useState(15);
     let lastFilmIndex = currentPage * filmsPerPage;

@@ -1,0 +1,8 @@
+button.filter{
+    color: #BCB9A2;
+    background-color: #E8E6DD;
+    margin-right: 30px;
+}
+button.filter:hover{
+    background-color: #7A785A;
+}
