@@ -46,6 +46,7 @@ export default class Content extends Component {
     const {Title,Rated,Runtime,imdbRating,Year,Poster,imdbVotes} = this.state;
     return (
           <div className='card-section'>
+            <a href={this.props.url} target="_blank" rel="noreferrer">
             <img className='image-card' src={Poster} alt='proba1' width='190px' height='290px' />
             <div className='card-section-down'>
               <strong className='title'>{Title}</strong>
@@ -63,6 +64,7 @@ export default class Content extends Component {
                     <span className='duration'>{Runtime}</span>
               </div>
             </div>
+            </a>
 
           </div>
       )

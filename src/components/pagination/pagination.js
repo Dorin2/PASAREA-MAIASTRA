@@ -11,7 +11,7 @@ const Pagination = props => {
       className='dorin'
         breakLabel="..."
         nextLabel=">"
-        onPageChange={props.Click}
+        onPageChange={props.OnClick}
         pageRangeDisplayed={props.pageRangeDisplayed}
         pageCount={props.pageCount}
         previousLabel="<"
