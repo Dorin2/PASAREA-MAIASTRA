@@ -6,16 +6,21 @@ import './filter.css';
 const Filter = ({choseCategory,pageNull}) => {
 
     const [categories,setCategories] = useState([
-        {key:'all',name:'TOATE'},{key:'interesant',name:'INTERESANT'} ,{key:'trist',name:'TRIST'},  
-        {key:'melancolic',name:'MELANCOLIC'},{key:'vesel',name:'VESEL'} ,{key:'ciudatel',name:'CIUDATEL'}]);
+        {id:0,key:'all',name:'TOATE',status: true},{id:1,key:'interesant',name:'INTERESANT',status: false} ,{id:2,key:'trist',name:'TRIST',status: false},  
+        {id:3,key:'melancolic',name:'MELANCOLIC',status: false},{id:4,key:'vesel',name:'VESEL',status: false} ,{key:'ciudatel',name:'CIUDATEL',status: false}]);
 
 
-
+        const chooseItem = (id) => {
+            const newArr = categories.map((item) =>
+              item.id === id ? { ...item, status: true } : { ...item, status: false }
+            );
+            setCategories(newArr);
+          };
 
     return (
         <>
             {categories.map((e)=>(
-               <button className="filter" key={e.key} onClick={()=>{choseCategory(e.name); pageNull(1)}}>{e.name}</button>
+               <button style={{ backgroundColor: e.status ? "#7A785A" : "" }} className="filter" key={e.key} onClick={()=>{choseCategory(e.name);chooseItem(e.id)}}>{e.name}</button>
             ))}
            
         </>

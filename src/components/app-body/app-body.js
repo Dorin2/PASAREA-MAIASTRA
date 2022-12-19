@@ -13,13 +13,11 @@ export default class Section extends Component{
 
         this.state = {
             filterFilms: [],
-            allfilmsNorm1: allfilmsNorm,
-            indexPage: ''
+            allfilmsNorm1: allfilmsNorm
         };
 
         this.state.filterFilms = this.state.allfilmsNorm1;
         this.choseCategory = this.choseCategory.bind(this);
-        this.PageNull = this.PageNull.bind(this);
        
     }
 
@@ -37,13 +35,6 @@ export default class Section extends Component{
         else{this.setState({
             filterFilms: this.state.allfilmsNorm1.filter((e)=> e.cat === categories)
         })}
-      }
-
-      PageNull(page){
-        this.setState({
-            indexPage: page
-        })
-
       }
 
      
@@ -67,7 +58,7 @@ render(){
                     <span className="line"></span>
                     <div className="section-filter">
                         <div  className="section-filter-right">
-                            <Filter choseCategory = {this.choseCategory} pageNull = {this.PageNull}/>
+                            <Filter choseCategory = {this.choseCategory}/>
                         </div>
                         <div className="section-filter-left">
                             
@@ -75,7 +66,7 @@ render(){
                     </div>
                 </div>
                 <div className="section-films">
-                    <Films allfilmsNorm = {this.state.filterFilms} indexPage ={this.state.indexPage}/>
+                    <Films allfilmsNorm = {this.state.filterFilms}/>
                 </div>
             
 
