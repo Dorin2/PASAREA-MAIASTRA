@@ -4,6 +4,7 @@ import './pagination.css';
 
 const Pagination = props => {
 
+  console.log(props.forcePage);
   
   return (
     <div>
@@ -16,6 +17,7 @@ const Pagination = props => {
         pageCount={props.pageCount}
         previousLabel="<"
         renderOnZeroPageCount={null}
+        forcePage = {props.forcePage}
       />
     </div>
   );

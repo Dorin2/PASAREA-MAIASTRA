@@ -1,9 +1,6 @@
 export default class Topfilms{
 
-    
-
-
-     getResource = async(url)=>{
+    getResource = async(url)=>{
 
         const res = await fetch(url)
 
