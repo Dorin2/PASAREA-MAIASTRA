@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Pagination from "../pagination/Pagination";
+import Pagination from "../pagination/pagination";
 import Row from "../row/row";
 
 const Films = ({ allfilmsNorm }) => {
