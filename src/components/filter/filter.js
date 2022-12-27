@@ -15,7 +15,6 @@ const Filter = ({choseCategory}) => {
               item.id === id ? { ...item, status: true } : { ...item, status: false }
             );
             setCategories(newArr);
-            console.log(newArr)
           };
         
 
